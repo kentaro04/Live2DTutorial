@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using Live2D.Cubism.Framework.Raycasting;
 
+// http://docs.live2d.com/cubism-sdk-tutorials/hittest/ からほぼコピー
+// 後半追加しました
 public class CubismHitTest : MonoBehaviour
 {
 
@@ -44,6 +46,8 @@ public class CubismHitTest : MonoBehaviour
 	void PlayAnimation(string inString ) {
 		switch ( inString ) {
 		case "ArtMesh":	// Drawables -> ArtMesh に CubismRaycastable がアタッチされているとここにきます。
+			// animator.CorssFase は 登録されたモーションを切り替えるだけです
+			// animator.Play("Motion1"); とすると問答無用で切り替わります。不自然
 			animator.CrossFade("Motion1",0.1f);	// 0.1秒かけて単にクロスフェードするので、メカニム(ステートマシン)を使った方がいいですがとりあえず一番簡単な方法で...
 			break;
 		case "ArtMesh77":
