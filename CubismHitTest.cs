@@ -58,5 +58,31 @@ public class CubismHitTest : MonoBehaviour
 			break;
 		}
 	}
+
+
+	// たとえばロジック
+	// PlayAnimationと取り替える
+	bool SkirtTouchShita = false;
+	void SkirtTouch (string instr)
+	{
+		switch (instr) {
+		case "ArtMeshSkirt":
+			if (SkirtTouchShita) {
+				SkirtTouchShita = true;
+				// anime.play("スカート下げるモーション");
+			}
+			break;
+		case "ArtMeshPants":
+			if (SkirtTouchShita) {
+				// スカートすでにめくってある
+				// anime.play("パンツさがって、もちあがって恥ずかしい");			
+			}
+			break;
+		}
+	}
+
+
+
+
 }
 
