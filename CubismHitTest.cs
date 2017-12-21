@@ -43,11 +43,11 @@ public class CubismHitTest : MonoBehaviour
 
 	void PlayAnimation(string inString ) {
 		switch ( inString ) {
-		case "ArtMesh":
-			animator.CrossFade("Motion1",1f);
+		case "ArtMesh":	// Drawables -> ArtMesh に CubismRaycastable がアタッチされているとここにきます。
+			animator.CrossFade("Motion1",0.1f);	// 0.1秒かけて単にクロスフェードするので、メカニム(ステートマシン)を使った方がいいですがとりあえず一番簡単な方法で...
 			break;
 		case "ArtMesh77":
-			animator.CrossFade("Motion2",1f);
+			animator.CrossFade("Motion2",0.1f);
 			break;
 		default:
 			animator.CrossFade("idle",1f);
