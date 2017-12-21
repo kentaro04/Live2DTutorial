@@ -75,7 +75,8 @@ public class CubismHitTest : MonoBehaviour
 		case "ArtMeshPants":
 			if (SkirtTouchShita) {
 				// スカートすでにめくってある
-				// anime.play("パンツさがって、もちあがって恥ずかしい");			
+				// anime.play("パンツさがって、もちあがって恥ずかしい");	
+				SkirtTouchShita = false; // 状態初期化
 			}
 			break;
 		}
